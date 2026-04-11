@@ -23,8 +23,8 @@ public class JournalEntryService {
         return journalEntryRepo.findAll();
     }
 
-    public JournalEntry getEntryById(ObjectId id) {
-        return journalEntryRepo.findById(id).orElse(null);
+    public Optional<JournalEntry> getEntryById(ObjectId id) {
+        return journalEntryRepo.findById(id);
     }
 
     public void deleteById(ObjectId id) {
